@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://service-management-system-xwcx.vercel.app/api/:match*"
+    }
+  ]
+}
