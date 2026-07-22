@@ -27,8 +27,8 @@ const ManageServices = () => {
   const fetchData = async () => {
     try {
       const [serviceRes, catRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/services'),
-        axios.get('http://localhost:5000/api/categories')
+        axios.get('http://https://service-management-system-xwcx.vercel.app/api/services'),
+        axios.get('http://https://service-management-system-xwcx.vercel.app/api/categories')
       ]);
       setServices(serviceRes.data);
       setCategories(catRes.data);
@@ -43,7 +43,7 @@ const ManageServices = () => {
   const handleAddCategory = async () => {
     if (!newCatName.trim()) return;
     try {
-      await axios.post('http://localhost:5000/api/categories', { name: newCatName });
+      await axios.post('http://https://service-management-system-xwcx.vercel.app/api/categories', { name: newCatName });
       setNewCatName("");
       fetchData();
     } catch (err) { alert("Category already exists!"); }
@@ -51,7 +51,7 @@ const ManageServices = () => {
 
   const deleteCategory = async (id) => {
     if (window.confirm("Delete this category?")) {
-      await axios.delete(`http://localhost:5000/api/categories/${id}`);
+      await axios.delete(`http://https://service-management-system-xwcx.vercel.app/api/categories/${id}`);
       fetchData();
     }
   };
@@ -76,9 +76,9 @@ const ManageServices = () => {
     const dataToSend = { ...formData, price: Number(formData.price) };
     try {
       if (isEditMode) {
-        await axios.put(`http://localhost:5000/api/services/${editingId}`, dataToSend);
+        await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/services/${editingId}`, dataToSend);
       } else {
-        await axios.post('http://localhost:5000/api/services', dataToSend);
+        await axios.post('http://https://service-management-system-xwcx.vercel.app/api/services', dataToSend);
       }
       setIsModalOpen(false);
       fetchData();
@@ -87,7 +87,7 @@ const ManageServices = () => {
 
   const handleDelete = async (id) => {
     if (window.confirm("Delete this service?")) {
-      await axios.delete(`http://localhost:5000/api/services/${id}`);
+      await axios.delete(`http://https://service-management-system-xwcx.vercel.app/api/services/${id}`);
       fetchData();
     }
   };

@@ -7,7 +7,7 @@
 // import { Mail, Shield, Phone } from "lucide-react";
 // import toast from "react-hot-toast";
 
-// const API = "http://localhost:5000/api/auth";
+// const API = "http://https://service-management-system-xwcx.vercel.app/api/auth";
 // const USERS_PER_PAGE = 6;
 
 // const ManageUsers = () => {
@@ -165,7 +165,7 @@ import {
 } from "lucide-react";
 import toast from "react-hot-toast";
 
-const API = "http://localhost:5000/api/auth";
+const API = "http://https://service-management-system-xwcx.vercel.app/api/auth";
 const USERS_PER_PAGE = 6;
 
 const ManageUsers = () => {

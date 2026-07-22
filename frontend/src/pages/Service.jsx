@@ -25,8 +25,8 @@ const Services = () => {
     const fetchData = async () => {
       try {
         const [serviceRes, catRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/services'),
-          axios.get('http://localhost:5000/api/categories')
+          axios.get('http://https://service-management-system-xwcx.vercel.app/api/services'),
+          axios.get('http://https://service-management-system-xwcx.vercel.app/api/categories')
         ]);
 
         setServices(serviceRes.data);

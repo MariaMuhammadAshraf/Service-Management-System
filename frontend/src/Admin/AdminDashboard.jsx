@@ -9,7 +9,7 @@
 // import { ResponsivePie } from "@nivo/pie";
 // import { motion, AnimatePresence } from "framer-motion";
 
-// const API = "http://localhost:5000/api";
+// const API = "http://https://service-management-system-xwcx.vercel.app/api";
 
 // function CircularProgress({ value, color, label, maxGoal = 10 }) {
 //   const percentage = Math.min((value / maxGoal) * 100, 100);
@@ -253,7 +253,7 @@
 // import { ResponsivePie } from "@nivo/pie";
 // import { motion, AnimatePresence } from "framer-motion";
 
-// const API = "http://localhost:5000/api";
+// const API = "http://https://service-management-system-xwcx.vercel.app/api";
 
 // function CircularProgress({ value, color, label, maxGoal = 10 }) {
 //   const percentage = Math.min((value / maxGoal) * 100, 100);
@@ -541,7 +541,7 @@ import { ResponsiveBar } from "@nivo/bar";
 import { ResponsivePie } from "@nivo/pie";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API = "http://localhost:5000/api";
+const API = "http://https://service-management-system-xwcx.vercel.app/api";
 
 function CircularProgress({ value, color, label, maxGoal = 10 }) {
   const percentage = Math.min((value / maxGoal) * 100, 100);

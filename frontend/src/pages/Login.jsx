@@ -13,7 +13,7 @@
 //     const handleLogin = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const res = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+//             const res = await axios.post('http://https://service-management-system-xwcx.vercel.app/api/auth/login', { email, password });
             
 //             const userData = res.data.user;
 //             localStorage.setItem('user', JSON.stringify(userData));
@@ -166,7 +166,7 @@
 
 //     try {
 //         const res = await axios.post(
-//             'http://localhost:5000/api/auth/login',
+//             'http://https://service-management-system-xwcx.vercel.app/api/auth/login',
 //             { email, password }
 //         );
 
@@ -363,7 +363,7 @@ const Login = () => {
 
         try {
             const res = await axios.post(
-                'http://localhost:5000/api/auth/login',
+                'http://https://service-management-system-xwcx.vercel.app/api/auth/login',
                 { email, password }
             );
 

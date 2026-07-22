@@ -8,7 +8,7 @@
 //   const fetchJobs = async () => {
 //     try {
 //       const res = await axios.get(
-//         `http://localhost:5000/api/bookings/provider/${storedUser.id}`
+//         `http://https://service-management-system-xwcx.vercel.app/api/bookings/provider/${storedUser.id}`
 //       );
 //       setJobs(res.data);
 //     } catch (error) {
@@ -24,7 +24,7 @@
 
 // const updateStatus = async (id, status) => {
 //   await axios.put(
-//     `http://localhost:5000/api/bookings/${id}/provider-status`,
+//     `http://https://service-management-system-xwcx.vercel.app/api/bookings/${id}/provider-status`,
 //     {
 //       status,
 //       providerId: storedUser.id
@@ -120,7 +120,7 @@ const MyJobs = () => {
     try {
       if (!userId) return;
       const res = await axios.get(
-        `http://localhost:5000/api/bookings/provider/${userId}`
+        `http://https://service-management-system-xwcx.vercel.app/api/bookings/provider/${userId}`
       );
       setJobs(res.data);
     } catch (error) {
@@ -139,7 +139,7 @@ const MyJobs = () => {
   const updateStatus = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/bookings/${id}/provider-status`,
+        `http://https://service-management-system-xwcx.vercel.app/api/bookings/${id}/provider-status`,
         {
           status,
           providerId: userId

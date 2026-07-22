@@ -16,7 +16,7 @@
 // //     const fetchUser = async () => {
 // //       try {
 // //         const res = await axios.get(
-// //           `http://localhost:5000/api/auth/user/${storedUser.id}`
+// //           `http://https://service-management-system-xwcx.vercel.app/api/auth/user/${storedUser.id}`
 // //         );
 // //         setUserData(res.data);
 // //         setFormData({
@@ -46,7 +46,7 @@
 
 // //     try {
 // //       const res = await axios.put(
-// //         `http://localhost:5000/api/auth/update-profile/${storedUser.id}`,
+// //         `http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${storedUser.id}`,
 // //         formData
 // //       );
 
@@ -180,7 +180,7 @@
 // //   useEffect(() => {
 // //     const fetchUser = async () => {
 // //       try {
-// //         const res = await axios.get(`http://localhost:5000/api/auth/user/${storedUser.id}`);
+// //         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${storedUser.id}`);
 // //         setUserData(res.data);
 // //         setFormData({ name: res.data.name || '', phone: res.data.phone || '', address: res.data.address || '' });
 // //       } catch (err) { console.error(err); }
@@ -193,7 +193,7 @@
 // //   const handleUpdate = async (e) => {
 // //     e.preventDefault();
 // //     try {
-// //       await axios.put(`http://localhost:5000/api/auth/update-profile/${storedUser.id}`, formData);
+// //       await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${storedUser.id}`, formData);
 // //       alert("Profile updated successfully ✅");
 // //     } catch (err) { alert("Update failed ❌"); }
 // //   };
@@ -261,7 +261,7 @@
 // //   useEffect(() => {
 // //     const fetchUser = async () => {
 // //       try {
-// //         const res = await axios.get(`http://localhost:5000/api/auth/user/${storedUser.id}`);
+// //         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${storedUser.id}`);
 // //         setUserData(res.data);
 // //         setFormData({ name: res.data.name || '', phone: res.data.phone || '', address: res.data.address || '' });
 // //       } catch (err) { console.error(err); }
@@ -275,7 +275,7 @@
 // //     e.preventDefault();
 // //     setIsSaving(true);
 // //     try {
-// //       const res = await axios.put(`http://localhost:5000/api/auth/update-profile/${storedUser.id}`, formData);
+// //       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${storedUser.id}`, formData);
 // //       localStorage.setItem("user", JSON.stringify({ ...storedUser, name: res.data.name }));
 // //       alert("Profile updated successfully ✅");
 // //     } catch (err) { alert("Update failed ❌"); }
@@ -377,7 +377,7 @@
 //   useEffect(() => {
 //     const fetchUser = async () => {
 //       try {
-//         const res = await axios.get(`http://localhost:5000/api/auth/user/${storedUser.id}`);
+//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${storedUser.id}`);
 //         setUserData(res.data);
 //         setFormData({ name: res.data.name || '', phone: res.data.phone || '', address: res.data.address || '' });
 //       } catch (err) { console.error(err); }
@@ -391,7 +391,7 @@
 //     e.preventDefault();
 //     setIsSaving(true);
 //     try {
-//       const res = await axios.put(`http://localhost:5000/api/auth/update-profile/${storedUser.id}`, formData);
+//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${storedUser.id}`, formData);
 //       localStorage.setItem("user", JSON.stringify({ ...storedUser, name: res.data.name }));
 //       alert("Profile updated successfully ✅");
 //     } catch (err) { alert("Update failed ❌"); }
@@ -501,7 +501,7 @@
 //     const fetchUser = async () => {
 //       try {
 //         if (!userId) return;
-//         const res = await axios.get(`http://localhost:5000/api/auth/user/${userId}`);
+//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${userId}`);
 //         setUserData(res.data);
 //         setFormData({ 
 //           name: res.data.name || '', 
@@ -521,7 +521,7 @@
 //     e.preventDefault();
 //     setIsSaving(true);
 //     try {
-//       const res = await axios.put(`http://localhost:5000/api/auth/update-profile/${userId}`, formData);
+//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${userId}`, formData);
 //       localStorage.setItem("user", JSON.stringify({ ...storedUser, name: res.data.name }));
 //       alert("Customer profile updated successfully ✅");
 //     } catch (err) { 
@@ -643,7 +643,7 @@ const UserProfile = () => {
     const fetchUser = async () => {
       try {
         if (!userId) return;
-        const res = await axios.get(`http://localhost:5000/api/auth/user/${userId}`);
+        const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${userId}`);
         setUserData(res.data);
         setFormData({ 
           name: res.data.name || '', 
@@ -663,7 +663,7 @@ const UserProfile = () => {
     e.preventDefault();
     setIsSaving(true);
     try {
-      const res = await axios.put(`http://localhost:5000/api/auth/update-profile/${userId}`, formData);
+      const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${userId}`, formData);
       localStorage.setItem("user", JSON.stringify({ ...storedUser, name: res.data.name }));
       alert("Customer profile updated successfully ✅");
     } catch (err) { 

@@ -27,7 +27,7 @@
 //       try {
 //         if (!userId) return;
 //         const res = await axios.get(
-//           `http://localhost:5000/api/bookings/provider/${userId}`
+//           `http://https://service-management-system-xwcx.vercel.app/api/bookings/provider/${userId}`
 //         );
 
 //         const completed = res.data.filter(
@@ -236,7 +236,7 @@ const Earnings = () => {
       try {
         if (!userId) return;
         const res = await axios.get(
-          `http://localhost:5000/api/bookings/provider/${userId}`
+          `http://https://service-management-system-xwcx.vercel.app/api/bookings/provider/${userId}`
         );
 
         const completed = res.data.filter(
