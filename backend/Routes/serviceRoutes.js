@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 // const Service = require('../Models/service.js');
-const Service = require('../Models/service.js');
+const Service = require('../Models/Service.js');
 
 // GET: All Services
 router.get('/', async (req, res) => {
