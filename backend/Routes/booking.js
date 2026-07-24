@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Booking = require("../Models/Booking");
 const User = require("../Models/User");
-const Service = require("../Models/service.js");
+const Service = require("../Models/Service.js");
 
 // ✅ CREATE BOOKING (User Side Later)
 router.post("/", async (req, res) => {
