@@ -19,16 +19,7 @@ connectDB();
 const app = express();
 
 // Middleware
-// app.use(cors());
-app.use(cors({
-  origin: [
-    'https://service-management-system-orpin.vercel.app', 
-    'http://localhost:3000',
-    'http://localhost:5173'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 // Routes
@@ -39,17 +30,17 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-// Test Route
-app.get('/', (req, res) => {
-    res.send('API is running...');
+// TEST ROUTE
+app.get("/", (req, res) => {
+  res.send("API is running...");
 });
 
+// SERVER
 const PORT = process.env.PORT || 5000;
-
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-    });
-}
-
-module.exports = app;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+app.get("/", (req, res) => {
+    res.status(200).send("service booking Backend is Live and Running!");
+});
+export default app;
