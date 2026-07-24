@@ -30,17 +30,18 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
-// TEST ROUTE
-app.get("/", (req, res) => {
-  res.send("API is running...");
-});
-
-// SERVER
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Ek hi clean test route rakhein
 app.get("/", (req, res) => {
     res.status(200).send("service booking Backend is Live and Running!");
 });
+
+// SERVER (Vercel ke liye app.listen ko condition mein daalein)
+const PORT = process.env.PORT || 5000;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
 export default app;
