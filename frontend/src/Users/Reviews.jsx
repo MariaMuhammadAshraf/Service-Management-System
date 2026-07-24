@@ -15,7 +15,7 @@
 //   const fetchData = async () => {
 //     try {
 //       const bookingRes = await axios.get(
-//         `http://https://service-management-system-xwcx.vercel.app/api/bookings/user/${storedUser.id}`
+//         `http://https://service-management-system-xwcx.vercel.app/api/api/bookings/user/${storedUser.id}`
 //       );
 
 //       const completed = bookingRes.data.filter(
@@ -25,7 +25,7 @@
 //       setBookings(completed);
 
 //       const reviewRes = await axios.get(
-//         `http://https://service-management-system-xwcx.vercel.app/api/reviews/user/${storedUser.id}`
+//         `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/user/${storedUser.id}`
 //       );
 
 //       setReviews(reviewRes.data);
@@ -42,7 +42,7 @@
 //     e.preventDefault();
 
 //     try {
-//       await axios.post("http://https://service-management-system-xwcx.vercel.app/api/reviews", {
+//       await axios.post("http://https://service-management-system-xwcx.vercel.app/api/api/reviews", {
 //         userId: storedUser.id,
 //         serviceId: formData.serviceId,
 //         rating: formData.rating,
@@ -166,7 +166,7 @@ const Reviews = () => {
   const fetchData = async () => {
     try {
       const bookingRes = await axios.get(
-        `http://https://service-management-system-xwcx.vercel.app/api/bookings/user/${storedUser.id}`
+        `http://https://service-management-system-xwcx.vercel.app/api/api/bookings/user/${storedUser.id}`
       );
 
       const completed = bookingRes.data.filter(
@@ -176,7 +176,7 @@ const Reviews = () => {
       setBookings(completed);
 
       const reviewRes = await axios.get(
-        `http://https://service-management-system-xwcx.vercel.app/api/reviews/user/${storedUser.id}`
+        `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/user/${storedUser.id}`
       );
 
       setReviews(reviewRes.data);
@@ -193,7 +193,7 @@ const Reviews = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://https://service-management-system-xwcx.vercel.app/api/reviews", {
+      await axios.post("http://https://service-management-system-xwcx.vercel.app/api/api/reviews", {
         userId: storedUser.id,
         serviceId: formData.serviceId,
         rating: formData.rating,

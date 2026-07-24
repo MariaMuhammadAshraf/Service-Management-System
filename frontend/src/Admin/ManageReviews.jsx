@@ -7,7 +7,7 @@
 
 //   const fetchReviews = async () => {
 //     try {
-//       const res = await axios.get("http://https://service-management-system-xwcx.vercel.app/api/reviews");
+//       const res = await axios.get("http://https://service-management-system-xwcx.vercel.app/api/api/reviews");
 //       setReviews(res.data);
 //     } catch (err) {
 //       console.error("Fetch error:", err);
@@ -20,7 +20,7 @@
 
 //   const handleApprove = async (id) => {
 //     try {
-//       await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/approve`);
+//       await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/approve`);
 //       fetchReviews();
 //     } catch (err) {
 //       console.error(err);
@@ -29,7 +29,7 @@
 
 //   const handleReject = async (id) => {
 //     try {
-//       await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/reject`);
+//       await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/reject`);
 //       fetchReviews();
 //     } catch (err) {
 //       console.error(err);
@@ -38,7 +38,7 @@
 
 //   const handleDelete = async (id) => {
 //     try {
-//       await axios.delete(`http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}`);
+//       await axios.delete(`http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}`);
 //       fetchReviews();
 //     } catch (err) {
 //       console.error(err);
@@ -177,7 +177,7 @@ import {
   User, AlertTriangle, CornerDownRight, Quote 
 } from "lucide-react";
 
-const API = "http://https://service-management-system-xwcx.vercel.app/api";
+const API = "http://https://service-management-system-xwcx.vercel.app/api/api";
 
 const ManageReviews = () => {
   const [reviews, setReviews] = useState([]);

@@ -6,7 +6,7 @@
 //   ShieldCheck, Clock, Ban, Briefcase 
 // } from "lucide-react";
 
-// const API = "http://https://service-management-system-xwcx.vercel.app/api/auth";
+// const API = "http://https://service-management-system-xwcx.vercel.app/api/api/auth";
 
 // const ManageProviders = () => {
 //   const [providers, setProviders] = useState([]);
@@ -213,7 +213,7 @@ import {
   ShieldCheck, Clock, Ban, Briefcase 
 } from "lucide-react";
 
-const API = "http://https://service-management-system-xwcx.vercel.app/api/auth";
+const API = "http://https://service-management-system-xwcx.vercel.app/api/api/auth";
 
 const ManageProviders = () => {
   const [providers, setProviders] = useState([]);

@@ -33,7 +33,7 @@
 //     const fetchLiveStatus = async () => {
 //       try {
 //         if (!userId) return;
-//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${userId}`);
+//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/user/${userId}`);
 //         if (res.data && res.data.isAvailable !== undefined) {
 //           setIsAvailable(res.data.isAvailable);
 //           // Sync localStorage so it stays fresh on page loads
@@ -54,7 +54,7 @@
 //     setIsAvailable(nextState); // Instant UI feedback
 
 //     try {
-//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/toggle-availability/${userId}`);
+//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/toggle-availability/${userId}`);
       
 //       // Sync with localStorage so state remains same on browser refresh
 //       const updatedUser = { ...storedUser, isAvailable: res.data.isAvailable };
@@ -337,12 +337,12 @@
 // // 2. Add this Update Function
 // const updateStatus = async (id, status) => {
 //   try {
-//     await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/bookings/${id}/provider-status`, {
+//     await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/bookings/${id}/provider-status`, {
 //       status,
 //       providerId: userId
 //     });
 //     // Re-fetch dashboard data to update the UI
-//     const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/dashboard/${userId}`);
+//     const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/dashboard/${userId}`);
 //     setDashboardData(res.data);
 //   } catch (error) {
 //     console.error("Failed to update status:", error);
@@ -354,7 +354,7 @@
 //     const fetchDashboard = async () => {
 //       try {
 //         if (!userId) return;
-//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/dashboard/${userId}`);
+//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/dashboard/${userId}`);
 //         setDashboardData(res.data);
 //       } catch (err) { console.error("Error:", err); }
 //     };
@@ -522,7 +522,7 @@ const ProviderDashboard = () => {
   const fetchDashboard = async () => {
     try {
       if (!userId) return;
-      const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/dashboard/${userId}`);
+      const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/dashboard/${userId}`);
       setDashboardData(res.data);
     } catch (err) { console.error("Error:", err); }
   };
@@ -533,7 +533,7 @@ const ProviderDashboard = () => {
     const fetchDashboard = async () => {
       try {
         if (!userId) return;
-        const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/dashboard/${userId}`);
+        const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/dashboard/${userId}`);
         setDashboardData(res.data);
       } catch (err) { console.error("Error:", err); }
     };
@@ -543,7 +543,7 @@ const ProviderDashboard = () => {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/bookings/${id}/provider-status`, { status, providerId: userId });
+      await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/bookings/${id}/provider-status`, { status, providerId: userId });
       fetchDashboard();
     } catch (error) { console.error("Failed to update status:", error); }
   };

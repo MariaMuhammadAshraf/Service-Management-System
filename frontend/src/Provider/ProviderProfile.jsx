@@ -25,7 +25,7 @@
 //     const fetchProvider = async () => {
 //       try {
 //         if (!userId) return;
-//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${userId}`);
+//         const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/user/${userId}`);
 //         setUserData(res.data);
 //         setFormData({ 
 //           name: res.data.name || '', 
@@ -44,7 +44,7 @@
 //     e.preventDefault();
 //     setIsSaving(true);
 //     try {
-//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${userId}`, {
+//       const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/update-profile/${userId}`, {
 //         name: formData.name,
 //         phone: formData.phone
 //       });
@@ -183,7 +183,7 @@ const ProviderProfile = () => {
     const fetchProfile = async () => {
       try {
         if (!userId) return;
-        const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/auth/user/${userId}`);
+        const res = await axios.get(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/user/${userId}`);
         setFormData({
           name: res.data.name || "",
           email: res.data.email || "",
@@ -204,7 +204,7 @@ const ProviderProfile = () => {
     e.preventDefault();
     setIsUpdating(true);
     try {
-      const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/auth/update-profile/${userId}`, {
+      const res = await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/auth/update-profile/${userId}`, {
         name: formData.name,
         phone: formData.phone
       });

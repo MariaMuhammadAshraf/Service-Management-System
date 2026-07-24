@@ -10,7 +10,7 @@
 //   const fetchReviews = async () => {
 //     try {
 //       const res = await axios.get(
-//         `http://https://service-management-system-xwcx.vercel.app/api/reviews/provider/${storedUser.id}`
+//         `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/provider/${storedUser.id}`
 //       );
 
 //       setReviews(res.data);
@@ -39,7 +39,7 @@
 
 //   const handleReply = async (id, reply) => {
 //     await axios.put(
-//       `http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/reply`,
+//       `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/reply`,
 //       { reply }
 //     );
 //     fetchReviews();
@@ -47,7 +47,7 @@
 
 //   const handleReport = async (id) => {
 //     await axios.put(
-//       `http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/report`
+//       `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/report`
 //     );
 //     alert("Review reported ⚠️");
 //   };
@@ -181,7 +181,7 @@ const ProviderReviews = () => {
     try {
       if (!userId) return;
       const res = await axios.get(
-        `http://https://service-management-system-xwcx.vercel.app/api/reviews/provider/${userId}`
+        `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/provider/${userId}`
       );
 
       setReviews(res.data);
@@ -213,7 +213,7 @@ const ProviderReviews = () => {
 
     try {
       await axios.put(
-        `http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/reply`,
+        `http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/reply`,
         { reply: replyText }
       );
       // Clear specific textarea buffer input
@@ -226,7 +226,7 @@ const ProviderReviews = () => {
 
   const handleReport = async (id) => {
     try {
-      await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/reviews/${id}/report`);
+      await axios.put(`http://https://service-management-system-xwcx.vercel.app/api/api/reviews/${id}/report`);
       alert("Review reported successfully ⚠️");
     } catch (error) {
       console.error("Failed to report resource:", error);

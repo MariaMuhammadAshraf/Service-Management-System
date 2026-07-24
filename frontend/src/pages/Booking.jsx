@@ -11,7 +11,7 @@
 // import axios from "axios";
 // import toast from "react-hot-toast";
 
-// const API = "http://https://service-management-system-xwcx.vercel.app/api";
+// const API = "http://https://service-management-system-xwcx.vercel.app/api/api";
 
 // const BookingPage = () => {
 //   const { serviceId } = useParams();
@@ -253,7 +253,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const API = "http://https://service-management-system-xwcx.vercel.app/api";
+const API = "http://https://service-management-system-xwcx.vercel.app/api/api";
 
 const Booking = () => {
   const { serviceId } = useParams();

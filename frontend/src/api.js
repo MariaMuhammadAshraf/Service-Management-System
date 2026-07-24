@@ -1,3 +1,2 @@
-const API_URL = "/api";
-
-export default API_URL;
+const app = require('../backend/server.js');
+module.exports = app;
