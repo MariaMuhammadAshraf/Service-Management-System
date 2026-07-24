@@ -1,7 +1,7 @@
 // routes/serviceRoutes.js
 const express = require('express');
 const router = express.Router();
-const Service = require('../Models/Service.js'); // Yahan 'Service' ka 'S' capital kar diya hai
+const Service = require('../Models/service.js');
 
 // GET: All Services
 router.get('/', async (req, res) => {
