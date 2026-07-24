@@ -1,15 +1,14 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
-const cors = require('cors'); // Ye line add karein
-const authRoutes = require('./Routes/auth'); // Path check kar lein
-// Backend ki main file mein check karein
+const cors = require('cors');
+
+const authRoutes = require('./Routes/auth');
 const serviceRoutes = require('./Routes/serviceRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
-const bookingRoutes = require("./Routes/booking");
-const reviewRoutes = require("./Routes/review");
-const dashboardRoutes = require("./Routes/dashboard");
-
+const bookingRoutes = require('./Routes/booking');
+const reviewRoutes = require('./Routes/review');
+const dashboardRoutes = require('./Routes/dashboard');
 
 // Load env vars
 dotenv.config();
@@ -18,23 +17,18 @@ dotenv.config();
 connectDB();
 
 const app = express();
-// Is line ko routes se PEHLE likhna zaroori hai
-app.use(cors());
 
-// Body parser (JSON data handle karne ke liye)
+// Middleware
+app.use(cors());
 app.use(express.json());
+
 // Routes
 app.use('/api/auth', authRoutes);
-// Yeh line check karein ke kya yahan '/api/services' likha hai?
 app.use('/api/services', serviceRoutes);
 app.use('/api/categories', categoryRoutes);
-app.use("/api/bookings", bookingRoutes);
-app.use("/api/reviews", reviewRoutes);
-app.use("/api/dashboard", dashboardRoutes);
-
-
-
- 
+app.use('/api/bookings', bookingRoutes);
+app.use('/api/reviews', reviewRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // Test Route
 app.get('/', (req, res) => {
@@ -43,7 +37,6 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-// Vercel ke liye server listen ki zaroorat nahi hoti lekin agar local chalana ho toh:
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
