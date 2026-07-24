@@ -45,13 +45,14 @@ app.use("/api/dashboard", dashboardRoutes);
 // });
 
 
-const PORT = process.env.PORT || 5000;
-
+// Test Route
 app.get('/', (req, res) => {
     res.send('API is running...');
 });
 
-// Vercel ke liye serverless export aur local testing ke liye app.listen
+const PORT = process.env.PORT || 5000;
+
+// Vercel ke liye server listen ki zaroorat nahi hoti lekin agar local chalana ho toh:
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
         console.log(`Server running on port ${PORT}`);
