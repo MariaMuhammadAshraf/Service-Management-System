@@ -1,7 +1,7 @@
 // routes/serviceRoutes.js
 const express = require('express');
 const router = express.Router();
-const Service = require('../Models/service.js'); // Aapka Mongoose Model
+const Service = require('../Models/Service.js'); // Yahan 'Service' ka 'S' capital kar diya hai
 
 // GET: All Services
 router.get('/', async (req, res) => {
