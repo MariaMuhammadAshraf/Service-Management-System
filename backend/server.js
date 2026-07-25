@@ -17,11 +17,18 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: "*", // Ya apna frontend URL yahan likh dein
+  origin: [
+    "https://service-management-system-orpin.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:5173"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
+
+// Preflight requests ke liye
+app.options('*', cors());
 
 app.use(express.json());
 
