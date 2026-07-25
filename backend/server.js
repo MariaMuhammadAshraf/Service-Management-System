@@ -33,10 +33,9 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).send("Backend is Live!");
+    res.status(200).send("service booking Backend is Live and Running!");
 });
 
-// IMPORTANT FOR VERCEL: Local dev ke liye listen ho, lakin Vercel ke liye export default app ho
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
