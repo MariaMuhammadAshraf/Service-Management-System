@@ -20,6 +20,8 @@ const Services = () => {
       default: return <Zap size={20} />;
     }
   };
+  // --- Yahan API URL set kiya hai ---
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchData = async () => {
