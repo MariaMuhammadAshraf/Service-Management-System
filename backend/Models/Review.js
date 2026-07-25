@@ -48,5 +48,5 @@ reported: {
   { timestamps: true }
 );
 
-export default mongoose.mode.Review ||
+export default mongoose.model.Review ||
   mongoose.model("Review", reviewSchema);
