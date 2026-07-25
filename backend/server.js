@@ -17,20 +17,15 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: [
-    "https://service-management-system-orpin.vercel.app",
-    "http://localhost:3000",
-    "http://localhost:5173"
-  ],
+  origin: "https://service-management-system-orpin.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
-// Preflight requests ke liye
-app.options('*', cors());
-
 app.use(express.json());
+
+ 
 
 app.use('/api/auth', authRoutes);
 app.use('/api/services', serviceRoutes);
