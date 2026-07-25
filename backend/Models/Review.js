@@ -33,20 +33,15 @@ const reviewSchema = new mongoose.Schema(
       default: "pending"
     },
     reply: {
-  type: String,
-  default: ""
-},
-reply: {
-  type: String,
-  default: ""
-},
-reported: {
-  type: Boolean,
-  default: false
-}
+      type: String,
+      default: ""
+    },
+    reported: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true }
 );
 
-export default mongoose.model.Review ||
-  mongoose.model("Review", reviewSchema);
+export default mongoose.models.Review || mongoose.model("Review", reviewSchema);
