@@ -330,7 +330,7 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Clock, Loader2, CalendarCheck } from "lucide-react";
 
-const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
+const API = "https://service-management-system-oc50.vercel.app/api";
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);

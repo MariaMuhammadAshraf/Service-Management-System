@@ -427,7 +427,7 @@ import { ResponsiveBar } from '@nivo/bar';
 import { ResponsivePie } from '@nivo/pie';
 import toast from 'react-hot-toast';
 
-const API_BASE = "http://https://service-management-system-oc50.vercel.app/api//api/api";
+const API_BASE = "https://service-management-system-oc50.vercel.app/api";
 
 // --- Framer Motion Animation Variants ---
 const containerVariants = {

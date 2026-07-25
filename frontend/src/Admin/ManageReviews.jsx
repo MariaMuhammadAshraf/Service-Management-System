@@ -177,7 +177,7 @@ import {
   User, AlertTriangle, CornerDownRight, Quote 
 } from "lucide-react";
 
-const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
+const API = "https://service-management-system-oc50.vercel.app/api";
 
 const ManageReviews = () => {
   const [reviews, setReviews] = useState([]);
