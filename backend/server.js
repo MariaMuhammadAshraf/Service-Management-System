@@ -17,7 +17,7 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: "*", // Filhal sabhi origins allow karne ke liye
+  origin: "*", // Ya apna frontend URL yahan likh dein
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
@@ -33,9 +33,10 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).send("service booking Backend is Live and Running!");
+    res.status(200).send("Backend is Live!");
 });
 
+// IMPORTANT FOR VERCEL: Local dev ke liye listen ho, lakin Vercel ke liye export default app ho
 const PORT = process.env.PORT || 5000;
 if (process.env.NODE_ENV !== 'production') {
   app.listen(PORT, () => {
