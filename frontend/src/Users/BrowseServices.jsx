@@ -13,7 +13,7 @@
 //   useEffect(() => {
 //     const fetchServices = async () => {
 //       try {
-//         const res = await axios.get('http://https://service-management-system-xwcx.vercel.app/api/api/services');
+//         const res = await axios.get('http://https://service-management-system-oc50.vercel.app/api/api/api/services');
 //         setServices(res.data);
 //       } catch (err) {
 //         console.error("Error fetching services:", err);
@@ -145,7 +145,7 @@ const BrowseServices = () => {
     const fetchServices = async () => {
       try {
         setLoading(true);
-        const res = await axios.get('http://https://service-management-system-xwcx.vercel.app/api/api/services');
+        const res = await axios.get('http://https://service-management-system-oc50.vercel.app/api/api/api/services');
         setServices(res.data);
         setLoading(false);
       } catch (err) {
