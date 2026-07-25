@@ -1,9 +1,8 @@
-const express = require("express");
+import express from 'express';
 const router = express.Router();
-const Review = require("../Models/Review");
-const Booking = require("../Models/Booking");
-const Service = require("../Models/Service");
-
+import Review from '../Models/Review.js';
+import Booking from '../Models/Booking.js';
+import Service from '../Models/Service.js';
 /* ==============================
    ✅ USER: GET HIS APPROVED REVIEWS
 ================================ */
@@ -213,4 +212,4 @@ router.put("/:id/report", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

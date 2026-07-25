@@ -1,8 +1,8 @@
-const express = require("express");
+import express from 'express';
 const router = express.Router();
-const Booking = require("../Models/Booking");
-const User = require("../Models/User");
-const Service = require("../Models/Service.js");
+import Booking from '../Models/Booking.js';
+import User from '../Models/User.js';
+import Service from '../Models/Service.js';
 
 // ✅ CREATE BOOKING (User Side Later)
 router.post("/", async (req, res) => {
@@ -189,4 +189,4 @@ router.put("/:id/cancel", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
-module.exports = router;
+export default router;

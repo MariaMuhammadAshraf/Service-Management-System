@@ -1,8 +1,7 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-// Agar folder ka naam 'models' hai aur file 'User.js'
-const User = require('../Models/User');
-const bcrypt = require('bcryptjs');
+import User from '../Models/User.js';
+import bcrypt from 'bcryptjs';
 
 // // --- SIGNUP ROUTE ---
 // router.post('/signup', async (req, res) => {
@@ -383,4 +382,6 @@ router.put("/:id/provider-status", async (req, res) => {
   await Booking.findByIdAndUpdate(req.params.id, { status });
   res.json({ message: "Updated ✅" });
 });
-module.exports = router;
+
+
+export default router;

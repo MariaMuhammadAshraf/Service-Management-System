@@ -1,8 +1,8 @@
-const express = require("express");
+import express from 'express';
 const router = express.Router();
-const User = require("../Models/User");
-const Service = require("../Models/Service");
-const Booking = require("../Models/Booking");
+import User from '../Models/User.js';
+import Service from '../Models/Service.js';
+import Booking from '../Models/Booking.js';
 
 // ✅ ADMIN DASHBOARD STATS
 router.get("/admin-stats", async (req, res) => {
@@ -67,4 +67,4 @@ router.get("/:id", async (req, res) => {
 
 
 
-module.exports = router;
+export default router;

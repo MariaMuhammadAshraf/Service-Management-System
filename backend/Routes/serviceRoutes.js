@@ -1,8 +1,7 @@
 // routes/serviceRoutes.js
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-// const Service = require('../Models/service.js');
-const Service = require('../Models/Service.js');
+import Service from '../Models/Service.js';
 
 // GET: All Services
 router.get('/', async (req, res) => {
@@ -53,4 +52,4 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
