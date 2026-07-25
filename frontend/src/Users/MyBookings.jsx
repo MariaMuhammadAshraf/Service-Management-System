@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+// const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 // const MyBookings = () => {
 //   const [bookings, setBookings] = useState([]);
@@ -111,7 +111,7 @@
 // import { motion, AnimatePresence } from "framer-motion";
 // import { Calendar, Clock, Loader2, CalendarCheck } from "lucide-react";
 
-// const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+// const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 // const MyBookings = () => {
 //   const [bookings, setBookings] = useState([]);
@@ -221,7 +221,7 @@
 // import { motion, AnimatePresence } from "framer-motion";
 // import { Calendar, Clock, Loader2, CalendarCheck } from "lucide-react";
 
-// const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+// const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 // const MyBookings = () => {
 //   const [bookings, setBookings] = useState([]);
@@ -330,7 +330,7 @@ import axios from "axios";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar, Clock, Loader2, CalendarCheck } from "lucide-react";
 
-const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 const MyBookings = () => {
   const [bookings, setBookings] = useState([]);

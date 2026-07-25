@@ -4,7 +4,7 @@
 // import React, { useEffect, useState } from "react";
 // import axios from "axios";
 
-// const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+// const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 // const ManageBookings = () => {
 //   const [bookings, setBookings] = useState([]);
@@ -244,7 +244,7 @@ import {
   Briefcase, ChevronDown 
 } from "lucide-react";
 
-const API = "http://https://service-management-system-oc50.vercel.app/api/api/api";
+const API = "http://https://service-management-system-oc50.vercel.app/api//api/api";
 
 const ManageBookings = () => {
   const [bookings, setBookings] = useState([]);
