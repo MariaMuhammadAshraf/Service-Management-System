@@ -17,8 +17,9 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: "*", // Ya apne frontend ka vercel URL yahan likh dein
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: "*", // Filhal sabhi origins allow karne ke liye
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
