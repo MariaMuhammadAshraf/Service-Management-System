@@ -101,8 +101,16 @@ router.post('/signup', async (req, res) => {
         });
     }
 });
+
+
 router.post('/login', async (req, res) => {
     try {
+
+      // ✅ Check if MongoDB is connected before running queries
+        if (mongoose.connection.readyState !== 1) {
+            return res.status(500).json({ message: "Database is connecting, please try again in a second." });
+        }
+        
         const { email, password } = req.body;
 
         // ✅ Check user exists
