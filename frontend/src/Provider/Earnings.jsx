@@ -27,7 +27,7 @@
 //       try {
 //         if (!userId) return;
 //         const res = await axios.get(
-//           `https://service-management-system-oc50.vercel.app/api/bookings/provider/${userId}`
+//           `https://service-management-system-ywma.vercel.app/api/bookings/provider/${userId}`
 //         );
 
 //         const completed = res.data.filter(
@@ -236,7 +236,7 @@ const Earnings = () => {
       try {
         if (!userId) return;
         const res = await axios.get(
-          `https://service-management-system-oc50.vercel.app/api/bookings/provider/${userId}`
+          `https://service-management-system-ywma.vercel.app/api/bookings/provider/${userId}`
         );
 
         const completed = res.data.filter(

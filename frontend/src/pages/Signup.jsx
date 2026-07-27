@@ -29,7 +29,7 @@ const Signup = () => {
         e.preventDefault();
         try {
             // Backend API Call
-            const res = await axios.post('https://service-management-system-oc50.vercel.app/api/auth/signup', formData);
+            const res = await axios.post('https://service-management-system-ywma.vercel.app/api/auth/signup', formData);
             alert(res.data.message);
             navigate('/login');
         } catch (err) {
