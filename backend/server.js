@@ -17,13 +17,14 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: "*", // Filhal sabhi origins allow kar ke check karein ke error hatta ya nahi
+  origin: "https://service-management-system-orpin.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
 app.use(express.json());
+
  
 
 app.use('/api/auth', authRoutes);
@@ -34,7 +35,7 @@ app.use('/api/reviews', reviewRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 
 app.get("/", (req, res) => {
-    res.status(200).send("Service Booking Backend is Live and Running!");
+    res.status(200).send("service booking Backend is Live and Running!");
 });
 
 const PORT = process.env.PORT || 5000;
