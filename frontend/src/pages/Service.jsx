@@ -24,15 +24,17 @@ const Services = () => {
   const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
-    const fetchData = async () => {
+   const fetchData = async () => {
       try {
         const [serviceRes, catRes] = await Promise.all([
           axios.get('https://service-management-system-oc50.vercel.app/api/services'),
           axios.get('https://service-management-system-oc50.vercel.app/api/categories')
         ]);
 
-        setServices(serviceRes.data);
-        const dynamicCats = ['All', ...catRes.data.map(c => c.name)];
+        setServices(Array.isArray(serviceRes.data) ? serviceRes.data : serviceRes.data.services || []);
+        
+        const catsData = Array.isArray(catRes.data) ? catRes.data : catRes.data.categories || [];
+        const dynamicCats = ['All', ...catsData.map(c => c.name)];
         setCategories(dynamicCats);
       } catch (err) {
         console.error("Fetch Error:", err);
