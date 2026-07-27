@@ -15,26 +15,46 @@ connectDB();
 
 const app = express();
 
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://service-management-system-orpin.vercel.app");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.setHeader("Access-Control-Allow-Credentials", "true");
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin", "https://service-management-system-orpin.vercel.app");
+//     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+//     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//     res.setHeader("Access-Control-Allow-Credentials", "true");
     
-    if (req.method === "OPTIONS") {
-        return res.status(200).end();
-    }
-    next();
-});
+//     if (req.method === "OPTIONS") {
+//         return res.status(200).end();
+//     }
+//     next();
+// });
 
-// app.use(cors());
-// 2. Standard CORS package
+// // app.use(cors());
+// // 2. Standard CORS package
+// app.use(cors({
+//     origin: "https://service-management-system-orpin.vercel.app",
+//     credentials: true
+// }));
+
+// app.use(express.json());
+
 app.use(cors({
-    origin: "https://service-management-system-orpin.vercel.app",
-    credentials: true
+    origin: ["https://service-management-system-orpin.vercel.app", "https://service-management-system-ywma.vercel.app"],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 app.use(express.json());
+
+// ✅ Bulletproof DB Middleware: Har request se pehle DB connection ensure karega
+app.use(async (req, res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        console.error("Database Connection Middleware Error:", error);
+        return res.status(500).json({ message: "Database connection failed", error: error.message });
+    }
+});
  
 
 app.use('/api/auth', authRoutes);
