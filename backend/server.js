@@ -16,14 +16,11 @@ connectDB();
 const app = express();
 
 // app.use(cors());
+// Sabse oopar middleware mein yeh likhein:
 app.use(cors({
-  origin: "https://service-management-system-orpin.vercel.app",
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
+    origin: '*', // Ya apne frontend ka exact Vercel URL yahan dein
+    credentials: true
 }));
-
-app.use(express.json());
 
  
 
