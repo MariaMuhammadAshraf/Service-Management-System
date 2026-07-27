@@ -18,7 +18,7 @@ const app = express();
 // app.use(cors());
 // Sabse oopar middleware mein yeh likhein:
 app.use(cors({
-    origin: '*', // Ya apne frontend ka exact Vercel URL yahan dein
+    origin: 'https://service-management-system-orpin.vercel.app',
     credentials: true
 }));
 
