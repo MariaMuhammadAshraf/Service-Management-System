@@ -17,14 +17,13 @@ const app = express();
 
 // app.use(cors());
 app.use(cors({
-  origin: "https://service-management-system-orpin.vercel.app",
+  origin: "*", // Filhal sabhi origins allow kar ke check karein ke error hatta ya nahi
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 
 app.use(express.json());
-
  
 
 app.use('/api/auth', authRoutes);
