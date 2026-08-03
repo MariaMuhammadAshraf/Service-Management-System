@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 
     if (selectedDate < today) {
       return res.status(400).json({ 
-        message: "Guzri hui (past) date ke liye booking nahi ho sakti!" 
+       message: "Bookings cannot be made for past dates."
       });
     }
 
