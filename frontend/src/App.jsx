@@ -165,7 +165,7 @@ function App() {
           <Route path="/" element={<><Navbar /><Home /><Footer /></>} />
           <Route path="/about" element={<><Navbar /><About /><Footer /></>} />
           <Route path="/services" element={<><Navbar /><Services /><Footer /></>} />
-          <Route path="/booking" element={<><Navbar /><Booking /><Footer /></>} />
+          {/* <Route path="/booking" element={<><Navbar /><Booking /><Footer /></>} /> */}
           <Route path="/booking/:serviceId" element={<><Navbar /><Booking /><Footer /></>} />
           <Route path="/login" element={<><Navbar /><Login /><Footer /></>} />
           <Route path="/signup" element={<><Navbar /><Signup /><Footer /></>} />

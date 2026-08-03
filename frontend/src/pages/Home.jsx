@@ -157,7 +157,7 @@ const smoothRotateY = useTransform(time, (t) => Math.cos(t / 1000) * 15);
       </p>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start px-4 md:px-0">
-        <Link to="/booking" className="group bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-blue-200">
+        <Link to="/services" className="group bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all duration-300 flex items-center justify-center gap-2 shadow-xl shadow-blue-200">
           Book a Service <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
         </Link>
         <Link to="/about" className="bg-blue-600  text-white   px-8 py-4 rounded-2xl font-bold hover:bg-slate-800 transition-all duration-300 text-center shadow-xl shadow-blue-200">
