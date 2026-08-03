@@ -339,12 +339,16 @@ const Booking = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="text-xs font-black text-slate-400 uppercase ml-1">Preferred Date</label>
-                    <input type="date" name="date" value={formData.date} onChange={handleChange}
+                    <input type="date" 
+                    name="date" value={formData.date} 
+                    onChange={handleChange}
+                    required // 👈 Required add kiya
+                      min={new Date().toISOString().split('T')[0]} // 👈 Yeh past/guzri hui dates ko disable kar dega
                       className="w-full mt-2 px-4 py-4 bg-slate-50 dark:bg-slate-900 dark:text-white border border-slate-100 dark:border-slate-700 rounded-2xl font-bold outline-none focus:ring-2 focus:ring-blue-600" />
                   </div>
                   <div>
                     <label className="text-xs font-black text-slate-400 uppercase ml-1">Preferred Time</label>
-                    <select name="time" value={formData.time} onChange={handleChange}
+                    <select name="time" value={formData.time} onChange={handleChange} required // 👈 Required add kiya
                       className="w-full mt-2 px-4 py-4 bg-slate-50 dark:bg-slate-900 dark:text-white border border-slate-100 dark:border-slate-700 rounded-2xl font-bold outline-none focus:ring-2 focus:ring-blue-600">
                       <option value="">Select Time</option>
                       <option>09:00 AM - 12:00 PM</option>

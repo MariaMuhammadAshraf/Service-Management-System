@@ -138,6 +138,7 @@ const Signup = () => {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
+          required
           type="tel"
           placeholder="03XX-XXXXXXX"
           className="w-full pl-9 pr-3 py-2.5 bg-slate-50 border border-slate-100 rounded-xl focus:ring-2 focus:ring-blue-600 outline-none font-bold text-xs"
