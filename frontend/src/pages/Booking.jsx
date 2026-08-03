@@ -254,6 +254,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const API = "https://service-management-system-ywma.vercel.app/api";
+const today = new Date().toISOString().split("T")[0];
 
 const Booking = () => {
   const { serviceId } = useParams();
