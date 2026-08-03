@@ -9,6 +9,19 @@ router.post("/", async (req, res) => {
   try {
     const { userId, serviceId, date, time } = req.body;
 
+    // 🛑 Past Date Validation Check
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const selectedDate = new Date(date);
+    selectedDate.setHours(0, 0, 0, 0);
+
+    if (selectedDate < today) {
+      return res.status(400).json({ 
+        message: "Guzri hui (past) date ke liye booking nahi ho sakti!" 
+      });
+    }
+
     const newBooking = new Booking({
       userId,
       serviceId,
